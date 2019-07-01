@@ -67,8 +67,8 @@ def length_valid(string):
 
 def contains_spaces(string):
     spaces = 0
-    for i in len(string):
-        if string[i] == ' ':
+    for c in string:
+        if c == ' ':
             spaces = spaces + 1
     if spaces > 0:
         return True
@@ -77,15 +77,15 @@ def contains_spaces(string):
 
 def count_at(string):
     at = 0
-    for i in len(string):
-        if string[i] == '@':
+    for c in string:
+        if sc == '@':
             at = at + 1
     return at
 
 def count_dot(string):
     dot = 0
-    for i in len(string):
-        if string[i] == '@':
+    for c in string:
+        if c == '@':
             dot = dot + 1
     return dot    
 
