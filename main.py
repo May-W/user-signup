@@ -11,42 +11,6 @@ def index():
 
 @app.route('/', methods=['POST'])
 
-def is_blank(string):
-    if len(string) == 0:
-        return True
-    else:
-        return False
-
-def length_valid(string):
-    if len(string) > 20 or len(string) < 3:
-        return False
-    else:
-        return True
-
-def contains_spaces(string):
-    spaces = 0
-    for i in len(string):
-        if string[i] == ' ':
-            spaces = spaces + 1
-    if spaces > 0:
-        return True
-    else:
-        return False
-
-def count_at(string):
-    at = 0
-    for i in len(string)
-        if string[i] == '@':
-            at = at + 1
-    return at
-
-def count_dot(string):
-    dot = 0
-    for i in len(string)
-        if string[i] == '@':
-            dot = dot + 1
-    return dot    
-
 def validate_form():
     username = request.form['username']
     password = request.form['password']
@@ -87,6 +51,43 @@ def validate_form():
         return redirect('/welcome')
     else: 
         return render_template('login_form.html', username_error = username_error, password_error = password_error, password2_error = password2_error, email_error = email_error, username=username, password='', password2='', email=email)
+
+
+def is_blank(string):
+    if len(string) == 0:
+        return True
+    else:
+        return False
+
+def length_valid(string):
+    if len(string) > 20 or len(string) < 3:
+        return False
+    else:
+        return True
+
+def contains_spaces(string):
+    spaces = 0
+    for i in len(string):
+        if string[i] == ' ':
+            spaces = spaces + 1
+    if spaces > 0:
+        return True
+    else:
+        return False
+
+def count_at(string):
+    at = 0
+    for i in len(string):
+        if string[i] == '@':
+            at = at + 1
+    return at
+
+def count_dot(string):
+    dot = 0
+    for i in len(string):
+        if string[i] == '@':
+            dot = dot + 1
+    return dot    
 
 
 @app.route('/welcome')
