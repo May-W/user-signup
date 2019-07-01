@@ -23,17 +23,17 @@ def validate_form():
     email_error = ''
 
 
-    if is_blank(username) == True:
+    if is_blank(username):
         username_error = "Username must not be blank"
     elif length_valid(username) == False or contains_spaces(username) == True:
         username_error = "Username must be between 3 and 20 characters and must not contain spaces"
     
-    if is_blank(password) == True:
+    if is_blank(password):
         password_error = "Password must not be blank"
     elif length_valid(password) == False or contains_spaces(password) == True:
         password_error = "Password must be between 3 and 20 characters and must not contain spaces"
 
-    if is_blank(password2) == True:
+    if is_blank(password2):
         password2_error = "Password must not be blank"
     elif length_valid(password2) == False or contains_spaces(password2) == True:
         password2_error = "Password must be between 3 and 20 characters and must not contain spaces"
