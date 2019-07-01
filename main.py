@@ -53,8 +53,7 @@ def validate_form():
 
 
 def is_blank(string):
-    if len(string) == 0:
-        return True
+    len(string) == 0
 
 def length_valid(string):
     if len(string) > 20 or len(string) < 3:
@@ -67,30 +66,21 @@ def contains_spaces(string):
     for c in string:
         if c == ' ':
             spaces = spaces + 1
-    if spaces > 0:
-        return True
-    else:
-        return False
+    return spaces > 0
 
 def one_at(string):
     at = 0
     for c in string:
         if c == '@':
             at = at + 1
-    if at == 1:
-        return True
-    else:
-        return False
+    return at == 1
 
 def one_dot(string):
     dot = 0
     for c in string:
         if c == '.':
             dot = dot + 1
-    if dot == 1:
-        return True
-    else:
-        return False
+    return dot == 1:
 
 
 @app.route('/welcome')
