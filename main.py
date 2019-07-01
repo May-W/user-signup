@@ -42,8 +42,8 @@ def validate_form():
         password_error: "Passwords must Match"
         password2_error = "Passwords must match"
 
-    if email != '':
-        if length_valid == False or contains_spaces == True or one_at == False or one_dot == False:
+    if len(email) != 0:
+        if length_valid(email) == False or contains_spaces(email) == True or one_at(email) == False or one_dot(email) == False:
             email_error = "Email must be between 3 and 20 characters, must not contain spaces, and may only contain one at and one dot"
 
     if not username_error and not password_error and not password2_error and not email_error:
