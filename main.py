@@ -84,9 +84,13 @@ def validate_form():
 
 
     if not username_error and not password_error and not password2_error and not email_error:
-        return redirect('/welcome.html')
+        return redirect('/welcome')
     else: 
         return render_template('login_form.html', username_error = username_error, password_error = password_error, password2_error = password2_error, email_error = email_error, username=username, password='', password2='', email=email)
 
+
+@app.route('/welcome')
+def welcome():
+    return render_template('welcome.html', title="Welcome!")
 
 app.run()
